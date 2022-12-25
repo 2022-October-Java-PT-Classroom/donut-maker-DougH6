@@ -31,8 +31,9 @@ class DonutMaker{
     }
 
     AutoClick(){
-        clearInterval();
+      // clearInterval(autoClickSetter);
         setInterval(donutCounter(),(1000/this.autoClickerCount));
+
     }
 
     getDonutCount(){
