@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 300%;
+
+}
+
+.nav-bar{
+    display:flex;
+    align-items: flex-start;
+    justify-content: right;
+    list-style-type: none;
+}
+
+.container{
+    background-image: url(./images/annie-spratt-EACvtuV2k2E-unsplash.jpg)
+}
+
+.donutGame{
+    display:grid;
+    grid-template-columns: 33% auto 33%;
+    
+}
