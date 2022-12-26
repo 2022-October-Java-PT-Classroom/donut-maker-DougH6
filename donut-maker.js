@@ -30,12 +30,6 @@ class DonutMaker{
         }else{}
     }
 
-    AutoClick(){
-      // clearInterval(autoClickSetter);
-        setInterval(donutCounter(),(1000/this.autoClickerCount));
-
-    }
-
     getDonutCount(){
         return parseFloat(this.donutCount.toFixed(2));
     }
