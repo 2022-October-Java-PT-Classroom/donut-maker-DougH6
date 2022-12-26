@@ -13,7 +13,7 @@ let donutClickerButton = (document.getElementById('donutClickerButton'));
 let autoClickerButton = (document.getElementById('autoClickerButton'));
     autoClickerButton.addEventListener('click', () =>{
         donutMaker.addAutoClicker();
-        clearInterval(autoClickerSetter)
+        clearInterval(autoClickerSetter);
         document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
         document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
         document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
@@ -28,3 +28,13 @@ let clickMultiplierButton = (document.getElementById('clickMultiplierButton'));
         document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
         document.getElementById('multiplier-cost').innerHTML = donutMaker.getDonutMultiplierCost();
     });
+
+    let reset = (document.getElementById('reset'));
+        reset.addEventListener('click', () => {
+            donutMaker = new DonutMaker(0,0,100,0,10,1);
+            document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
+            document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
+            document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
+            document.getElementById('multiplier-count').innerHTML = donutMaker.getDonutMultiplier();
+            document.getElementById('multiplier-cost').innerHTML = donutMaker.getDonutMultiplierCost();
+        });
