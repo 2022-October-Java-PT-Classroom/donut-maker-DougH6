@@ -39,7 +39,7 @@ autoClickerButton.addEventListener('click', () =>{
     document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
     document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
-    autoDonutCounter = setInterval( document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount(),1000);
+    autoDonutCounter = setInterval(( document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount()),1000);
     autoClickerSetter = setInterval(donutMaker.donutCounter(),(1000/donutMaker.getAutoClickerCount()));
 });
 
