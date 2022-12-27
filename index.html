@@ -9,37 +9,52 @@
   </head>
   <body>
     <div class="container"></div>
+    
     <header>
       <h1>Donut Clicker!</h1>
-        <nav>
-          <ul class="nav-bar">
-            <li><button onclick="">Fred the Baker Baking Company</button></li>
-            <li><button onclick="">Cookie Clicker, the inspiration</button></li>
-            <li><button onclick="">Contact</button></li>
-          </ul>
+        <nav class="navBar">
+          <div class="dropBaker">
+            <button class="dropBakerButton">Fred the Baker Baking Company</button>
+            <div class="dropBakerText hide">
+              <p>Fred the Baker is tired of making real donuts and is ready to retire. He needs our help to keep his love of donuts alive. He wants you to create virtual donuts for the world to enjoy.</p>
+            </div>
+          </div>
+          <div class="dropCookie">
+            <button class="dropCookieButton">Cookie Clicker, the inspiration</button>
+            <div class="dropCookieLink hide">
+              <a href="https://orteil.dashnet.org/cookieclicker/">Cookie Clicker</a>
+            </div>
+        </div>
+        <div class="dropContact">
+          <button class="dropContactButton">Creator Contact</button>
+          <div class="dropContactLink hide">
+            <p>Douglas Holt</p>
+            <a href="https://www.linkedin.com/in/douglas-p-holt/">Linkedin</a>
+            <a href="https://dough6.github.io/">GitHub</a>
+          </div>
+      </div>
         </nav>
     </header>
-    <div id="donutGame">
-      <section id="donutClickerButtonSection">
-        <button onclick id="donutClickerButton">Donut</button>
-          <p>Clicks: <span id="donut-count">0</span></p>
-      </section>
-      <section id="autoClicker">
-        <button onclick id="autoClickerButton">Auto Clicker</button>
-          <p>Auto Clickers: <span id="auto-clicker-count">0</span></p>
-          <p>Auto Clicker Cost: <span id="auto-clicker-cost">100</span></p>
-      </section>
-      <section id="clickMutiplier">
-        <button onclick id="clickMultiplierButton">Click Multiplier</button>
-          <p>Multipliers: <span id="multiplier-count">0</span></p>
-          <p>Multiplier Cost: <span id="multiplier-cost">10</span></p>
-      </section>
-      <section id="reset">
-        <button id="resetButton">Reset</button>
-      </section>
-
-    </div>
+      <div id="donutGame">
+        <section id="donutClickerButtonSection">
+          <button onclick id="donutClickerButton">Donut</button>
+            <p>Clicks: <span id="donut-count">0</span></p>
+        </section>
+        <section id="autoClicker">
+          <button onclick id="autoClickerButton">Auto Clicker</button>
+            <p>Auto Clickers: <span id="auto-clicker-count">0</span></p>
+            <p>Auto Clicker Cost: <span id="auto-clicker-cost">100</span></p>
+        </section>
+        <section id="clickMutiplier">
+          <button onclick id="clickMultiplierButton">Click Multiplier</button>
+            <p>Multipliers: <span id="multiplier-count">0</span></p>
+            <p>Multiplier Cost: <span id="multiplier-cost">10</span></p>
+        </section>
+        <section id="reset">
+          <button id="resetButton">Reset</button>
+        </section>
+      </div>
     <script src="./donut-maker-app.js"></script>
   </body>
-  <footer>Donut Clicker 2022</footer>
+    <footer>Donut Clicker 2022</footer>
 </html>
