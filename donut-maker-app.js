@@ -13,9 +13,6 @@ const dropCookieLink =document.querySelector(".dropCookieLink");
 const dropContactButton = document.querySelector(".dropContactButton");
 const dropContactLink =document.querySelector(".dropContactLink");
 
-let autoClickerSetter;
-let autoDonutCounter;
-
 dropBakerButton.addEventListener('click', () =>{
     dropBakerText.classList.toggle('hide');
 });
@@ -34,13 +31,11 @@ donutClickerButton.addEventListener('click', () =>{
 });
 
 autoClickerButton.addEventListener('click', () =>{
-    donutMaker.addAutoClicker();
-    clearInterval(autoClickerSetter);
+    donutMaker.addAutoClickerCost();
     document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
     document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
-    autoDonutCounter = setInterval(( document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount()),1000);
-    autoClickerSetter = setInterval(donutMaker.donutCounter(),(1000/donutMaker.getAutoClickerCount()));
+    donutMaker.addAutoCLick();
 });
 
 clickMultiplierButton.addEventListener('click', () =>{
@@ -51,7 +46,7 @@ clickMultiplierButton.addEventListener('click', () =>{
     });
 
 reset.addEventListener('click', () => {
-    donutMaker = new DonutMaker(0,0,100,0,10,1);
+    donutMaker = new DonutMaker(100,0,100,0,10,1);
     document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
     document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();

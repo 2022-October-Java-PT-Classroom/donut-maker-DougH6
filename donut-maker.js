@@ -9,11 +9,12 @@ class DonutMaker{
         this.donutClickValue = donutClickValue;
     }
 
+
     donutCounter(){
         this.donutCount=parseFloat((this.donutCount+this.donutClickValue).toFixed(2));
     }
 
-    addAutoClicker(){
+    addAutoClickerCost(){
         if(this.donutCount >= this.autoClickerCost){
             this.donutCount = this.donutCount-this.autoClickerCost;
             this.autoClickerCount++;
@@ -28,6 +29,13 @@ class DonutMaker{
             this.donutClickValue = parseFloat((this.donutClickValue*1.2).toFixed(2));
             this.donutMultiplierCost= parseFloat((this.donutMultiplierCost*1.1).toFixed(2));
         }else{}
+    }
+
+    addAutoCLick(){
+        setInterval((() => {
+            this.donutCount=parseFloat((this.donutCount+this.donutClickValue).toFixed(2));
+            console.log('Hello SLime!');
+        }), 1000);
     }
 
     getDonutCount(){
