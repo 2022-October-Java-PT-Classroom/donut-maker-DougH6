@@ -51,7 +51,7 @@ clickMultiplierButton.addEventListener('click', () =>{
     });
 
 reset.addEventListener('click', () => {
-    donutMaker = new DonutMaker(100,0,100,0,10,1);
+    donutMaker = new DonutMaker(0,0,100,0,10,1);
     document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
     document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
