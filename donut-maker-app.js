@@ -11,7 +11,12 @@ const dropBakerText =document.querySelector(".dropBakerText");
 const dropCookieButton = document.querySelector(".dropCookieButton");
 const dropCookieLink =document.querySelector(".dropCookieLink");
 const dropContactButton = document.querySelector(".dropContactButton");
-const dropContactLink =document.querySelector(".dropContactLink");
+const dropContactLink = document.querySelector(".dropContactLink");
+
+const donutDisplay = setInterval((() =>{
+    document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
+}),300)
+
 
 dropBakerButton.addEventListener('click', () =>{
     dropBakerText.classList.toggle('hide');

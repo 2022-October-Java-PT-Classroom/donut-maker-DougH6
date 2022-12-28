@@ -8,7 +8,7 @@ class DonutMaker{
         this.donutMultiplierCost = donutMultiplierCost;
         this.donutClickValue = donutClickValue;
     }
-
+    
 
     donutCounter(){
         this.donutCount=parseFloat((this.donutCount+this.donutClickValue).toFixed(2));
