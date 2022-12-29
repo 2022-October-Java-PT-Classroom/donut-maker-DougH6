@@ -57,4 +57,11 @@ reset.addEventListener('click', () => {
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
     document.getElementById('multiplier-count').innerHTML = donutMaker.getDonutMultiplier();
     document.getElementById('multiplier-cost').innerHTML = donutMaker.getDonutMultiplierCost();
+    for (var i = 1; i < 99999; i++){
+        window.clearInterval(i);
+    }
+    const donutDisplay = setInterval((() =>{
+        document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
+    }),300)
+    
 });
