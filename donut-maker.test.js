@@ -16,21 +16,21 @@ describe ('DonutMaker object', () => {
     });
 
     test('Does donutMaker retrieve auto clicker count', () => {
-        const underTest = new DonutMaker(1, 100);
+        const underTest = new DonutMaker(1,0,100,0,10,1);
         underTest.getAutoClickerCount();
-        expect(underTest.autoClickerCount).toEqual(100);
+        expect(underTest.autoClickerCount).toEqual(0);
     });
 
     test('Dose donutMaker add to the auto clicker count',() =>{
-        const underTest = new DonutMaker(1000,100,100);
-        underTest.addAutoClicker();
+        const underTest = new DonutMaker(100,0,100,0,10,1);
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount();
-        expect(underTest.autoClickerCount).toEqual(101);
+        expect(underTest.autoClickerCount).toEqual(1);
     });
 
     test('Does donutMaker subtract 100 donuts in exchanger for one auto clicker',() =>{
-        const underTest = new DonutMaker(101,0,100);
-        underTest.addAutoClicker();
+        const underTest = new DonutMaker(101,0,100,0,10,1);
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount();
         expect(underTest.autoClickerCount).toEqual(1);
         underTest.getDonutCount;
@@ -38,8 +38,8 @@ describe ('DonutMaker object', () => {
     });
 
     test('Does donutMaker auto clicker increase in cost by 10%',() =>{
-        const underTest = new DonutMaker(111,1,110);
-        underTest.addAutoClicker();
+        const underTest = new DonutMaker(111,1,110,0,10,1);
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount;
         expect(underTest.autoClickerCount).toEqual(2);
         underTest.getAutoClickerCost;
@@ -48,17 +48,17 @@ describe ('DonutMaker object', () => {
 
     test('Does donutMaker auto clicker increase in cost by 10% each time',() =>{
         const underTest = new DonutMaker(1000,1,110);
-        underTest.addAutoClicker();
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount;
         expect(underTest.autoClickerCount).toEqual(2);
         underTest.getAutoClickerCost;
         expect(underTest.autoClickerCost).toEqual(121);
-        underTest.addAutoClicker();
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount;
         expect(underTest.autoClickerCount).toEqual(3);
         underTest.getAutoClickerCost;
         expect(underTest.autoClickerCost).toEqual(133.1);
-        underTest.addAutoClicker();
+        underTest.addAutoClickerCost();
         underTest.getAutoClickerCount;
         expect(underTest.autoClickerCount).toEqual(4);
         underTest.getAutoClickerCost;
@@ -67,7 +67,7 @@ describe ('DonutMaker object', () => {
 
     test('Does donutMaker prevent auto clicker purchase if not enough donuts', () =>{
         const underTest = new DonutMaker(50,0,100);
-        underTest.addAutoClicker();
+        underTest.addAutoClickerCost();
         underTest.getDonutCount();
         expect(underTest.donutCount).toEqual(50);
     });
