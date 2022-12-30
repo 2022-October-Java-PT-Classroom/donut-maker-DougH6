@@ -19,6 +19,7 @@ class DonutMaker{
             this.donutCount = this.donutCount-this.autoClickerCost;
             this.autoClickerCount++;
             this.autoClickerCost = parseFloat((this.autoClickerCost*1.1).toFixed(2));
+            this.addAutoCLick();
         }else{}
     }
 
@@ -32,7 +33,7 @@ class DonutMaker{
     }
 
     addAutoCLick(){
-        setInterval((() => {
+    setInterval((() => {
             this.donutCount=parseFloat((this.donutCount+this.donutClickValue).toFixed(2));
             console.log('Hello SLime!');
         }), 1000);

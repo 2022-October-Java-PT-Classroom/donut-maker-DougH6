@@ -40,7 +40,6 @@ autoClickerButton.addEventListener('click', () =>{
     document.getElementById('auto-clicker-count').innerHTML = donutMaker.getAutoClickerCount();
     document.getElementById('donut-count').innerHTML = donutMaker.getDonutCount();
     document.getElementById('auto-clicker-cost').innerHTML = donutMaker.getAutoClickerCost();
-    donutMaker.addAutoCLick();
 });
 
 clickMultiplierButton.addEventListener('click', () =>{
@@ -65,3 +64,4 @@ reset.addEventListener('click', () => {
     }),300)
     
 });
+
